@@ -1,0 +1,32 @@
+{
+  "name": "simpleservice",
+  "version": "1.0.0",
+  "description": "Node.js web service for SimplySocial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'test comand'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rasellers0/simpleService.git"
+  },
+  "keywords": [
+    "node",
+    "web",
+    "service"
+  ],
+  "author": "Ryan Sellers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rasellers0/simpleService/issues"
+  },
+  "homepage": "https://github.com/rasellers0/simpleService#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.8"
+  }
+}
