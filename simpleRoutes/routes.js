@@ -1,16 +1,13 @@
 'use strict';
 
 module.exports = function(app) {
-  var todoList = require('../controllers/todoListController');
+  var user = require('../simpleControllers/userController');
 
-  // todoList Routes
   app.route('/users')
-    .get(todoList.list_all_tasks)
-    .post(todoList.create_a_task);
+    .get(user.loadAll);
 
 
   app.route('/users/:userKey')
-    .get(todoList.read_a_task)
-    .put(todoList.update_a_task)
-    .delete(todoList.delete_a_task);
+    .get(user.loadUser)
+    .put(user.updateUserProfile);
 };

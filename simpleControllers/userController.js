@@ -5,6 +5,7 @@ var mongoose = require('mongoose'),
   User = mongoose.model('Users');
 
   exports.loadAll = function(req, res) {
+    console.log(User);
     User.find({}, function(err, user){
       if (err) res.send(err);
       res.json(user);
@@ -18,4 +19,9 @@ var mongoose = require('mongoose'),
     });
   }
 
-  
+  exports.updateUserProfile = function(req, res){
+    User.save(function(err){
+      if(err) res.send(err);
+      return this;
+    });
+  }
