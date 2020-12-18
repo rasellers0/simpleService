@@ -19,6 +19,13 @@ var mongoose = require('mongoose'),
     });
   }
 
+  exports.createNewProfile = function(req, res){
+    User.save(function(){
+      if(err) res.send(err);
+      return this;
+    });
+  }
+
   exports.updateUserProfile = function(req, res){
     User.save(function(err){
       if(err) res.send(err);
